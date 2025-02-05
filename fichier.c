@@ -34,16 +34,18 @@ int main ()
 			        system("ping -c 4 8.8.8.8");
 			}	
           		
-		   }
-		   else if (nombre<0 && nombre>4)
-		   {      
-			   printf("Erreur,veuillez entrer un nombre valide");
-                   }
-
+		   }   
+			
+                   
 	           else if (nombre==0) 
 	           {	
 		        break;
-	           }	 
+	           }	
+
+		   else 
+                   {
+                        printf("Erreur,veuillez entrer une nombre valide.\n");
+                   }			
 
         }
 	while (1);
