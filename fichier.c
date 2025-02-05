@@ -1,18 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void afficher_menu ;
+void afficher_menu ();
 
 int recup_valeur (int x); 
 
 int main ()
-{
+{        
+        int nombre; //le nombre demandé à l'utilisateur
+
+	afficher_menu();
+
+	recup_valeur(nombre);
 
 
-return 0;
+        return 0;
 }
 
-void afficher_menu
+void afficher_menu ()
 {  
       printf("Si vous voulez afficher l'adresse IP , veuillez entrer 1.\n");
       printf("Si vous voulez afficher la table de routage ,veuillez entrer 2.\n");
