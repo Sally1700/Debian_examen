@@ -3,7 +3,6 @@
 
 void afficher_menu ();
 
-int recup_valeur (int x); 
 
 int main ()
 {        
@@ -14,7 +13,9 @@ int main ()
 	do 
 	{	
 
-	      recup_valeur(nombre);
+	           printf("Veuillez entrer le nombre souhaité:");
+		   scanf("%i",&nombre);
+
 
 	           if (nombre>0 && nombre<4)
 	           {
@@ -34,17 +35,19 @@ int main ()
 			}	
           		
 		   }
+		   else if (nombre<0 && nombre>4)
+		   {      
+			   printf("Erreur,veuillez entrer un nombre valide");
+                   }
+
 	           else if (nombre==0) 
 	           {	
-		        system("-");
+		        break;
 	           }	 
 
         }
-	while (nombre!=0);
-	{     
-        	printf ("Erreur,veuillez entrer un nombre valide");
-
-	}	
+	while (1);
+	
         return 0;
 }
 
@@ -58,9 +61,5 @@ void afficher_menu ()
 }
 
 
-int recup_valeur (int x)
-{
-      printf("Veuillez entrer le nombre souhaité:");
-      scanf("%i",&x);
 
-}	
+	      
