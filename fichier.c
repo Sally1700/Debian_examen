@@ -16,20 +16,35 @@ int main ()
 
 	      recup_valeur(nombre);
 
-	      if (nombre>0 && nombre<4)
-	      {
-                    printft("faire les commandes");
-	      }
-	      else if (nombre==0) 
-	      {	
-		    printf("quitter");
-	      }	 
+	           if (nombre>0 && nombre<4)
+	           {
+                        if (nombre==1)
+			{	
+			        system("ip a");
+			}
+
+	                else if (nombre==2)
+		        {
+				system("ip route");
+			}
+	                
+	                else if (nombre==3)
+		        {	
+			        system("ping -c 4 8.8.8.8");
+			}	
+          		
+		   }
+	           else if (nombre==0) 
+	           {	
+		        system("-");
+	           }	 
 
         }
-	while (nombre!=0)
-              printf ("Erreur,veuillez entrer un nombre valide");
+	while (nombre!=0);
+	{     
+        	printf ("Erreur,veuillez entrer un nombre valide");
 
-		
+	}	
         return 0;
 }
 
