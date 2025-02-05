@@ -10,10 +10,26 @@ int main ()
         int nombre; //le nombre demandé à l'utilisateur
 
 	afficher_menu();
+        
+	do 
+	{	
 
-	recup_valeur(nombre);
+	      recup_valeur(nombre);
 
+	      if (nombre>0 && nombre<4)
+	      {
+                    printft("faire les commandes");
+	      }
+	      else if (nombre==0) 
+	      {	
+		    printf("quitter");
+	      }	 
 
+        }
+	while (nombre!=0)
+              printf ("Erreur,veuillez entrer un nombre valide");
+
+		
         return 0;
 }
 
